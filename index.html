@@ -20,7 +20,7 @@
    </header>
 
    <main>
-      <section class="w-2/4 mx-auto rounded bg-blue-400 p-8 mt-6">
+      <section class="w-full lg:w-2/4 mx-auto rounded bg-blue-400 p-8 mt-6">
          <!-- <h3 class="font-medium mb-5">Please Log In</h3> -->
          <div class="">
             <form action="" name="form">
@@ -30,33 +30,33 @@
                </div>
                <div class="grid grid-cols-2">
                   <div class="grid grid-cols-3">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="1" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="2" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="3" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="4" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="5" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="6" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="7" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="8" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="9" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="0" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="00" onclick="calculate(this.value)">
-                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="." onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="1" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="2" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="3" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="4" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="5" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="6" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="7" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="8" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="9" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="0" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="00" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-1 md:m-2 rounded" value="." onclick="calculate(this.value)">
                   </div>
                   <div class="grid grid-cols-2">
-                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="+" onclick="calculate(this.value)">
+                     <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl" value="+" onclick="calculate(this.value)">
                      
-                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="-" onclick="calculate(this.value)">
+                     <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl" value="-" onclick="calculate(this.value)">
                      
-                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="*" onclick="calculate(this.value)">
+                     <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl" value="*" onclick="calculate(this.value)">
                      
-                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="/" onclick="calculate(this.value)">
+                     <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl" value="/" onclick="calculate(this.value)">
                      
-                     <!-- <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="%" onclick="calculate(this.value)"> -->
+                     <!-- <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl" value="%" onclick="calculate(this.value)"> -->
                      
-                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="C" onclick= "display.value = null">
+                     <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl" value="C" onclick= "display.value = null">
 
-                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl col-span-2" value="=" onclick="result.value = eval(display.value)">
+                     <input type="button" class="bg-red-600 text-white p-2 m-1 md:m-2 text-center cursor-pointer rounded text-2xl col-span-2" value="=" onclick="result.value = eval(display.value)">
                   </div>
                </div>
             </form>
