@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="favicon.png">
+   <title>Js calculator</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+   <header>
+      <section>
+         <h1 class="text-5xl font-semibold text-center">Calculator
+            <span class="text-6xl text-pink-400">! Js ! </span>
+         </h1>
+      </section>
+   </header>
+
+   <main>
+      <section class="w-2/4 mx-auto rounded bg-blue-400 p-8 mt-6">
+         <!-- <h3 class="font-medium mb-5">Please Log In</h3> -->
+         <div class="">
+            <form action="" name="form">
+               <div class="display p-5 rounded bg-green-700 text-white mb-3">
+                  <input class="w-full p-2" type="text" value="" name="display" placeholder="0" disabled>
+                  <input class="w-full text-end p-2" type="text" value="" name="result" disabled>
+               </div>
+               <div class="grid grid-cols-2">
+                  <div class="grid grid-cols-3">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="1" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="2" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="3" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="4" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="5" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="6" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="7" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="8" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="9" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="0" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="00" onclick="calculate(this.value)">
+                     <input type="button" class="bg-amber-400 cursor-pointer m-2 rounded" value="." onclick="calculate(this.value)">
+                  </div>
+                  <div class="grid grid-cols-2">
+                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="+" onclick="calculate(this.value)">
+                     
+                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="-" onclick="calculate(this.value)">
+                     
+                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="*" onclick="calculate(this.value)">
+                     
+                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="/" onclick="calculate(this.value)">
+                     
+                     <!-- <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="%" onclick="calculate(this.value)"> -->
+                     
+                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl" value="C" onclick= "display.value = null">
+
+                     <input type="button" class="bg-red-600 text-white p-2 m-2 text-center cursor-pointer rounded text-2xl col-span-2" value="=" onclick="result.value = eval(display.value)">
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+   </main>
+   <!-- scripts are linked below -->
+   <script>
+      function calculate(x){
+         form.display.value = form.display.value + x;
+      }
+
+      function clear(){
+         form.display.value = '';
+      }
+   </script>
+</body>
+
+</html>

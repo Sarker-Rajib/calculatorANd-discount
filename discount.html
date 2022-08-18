@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="favicon.png">
+   <title>Discount</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+   <header>
+      <section class="pb-12">
+         <h1 class="text-3xl font-semibold text-center">Get Discount
+            <span class="text-4xl text-pink-400">! Js ! </span>
+         </h1>
+      </section>
+   </header>
+
+   <main>
+      <div class="card bg-pink-600 text-white w-96 mx-auto rounded p-3 text-center">
+         <p class="text-2xl py-2">Solar car</p>
+         <img class="w-full rounded" src="car.jpg" alt="car">
+         <p class="text-2xl py-2">Price $<span id="price">1980</span></p>
+
+         <div class="bg-blue-400 py-2 rounded">
+            <p class="mb-2">Get Discount <span id="discount">30</span>%</p>
+            <input id="discout-code" type="text" placeholder="Offer Code : DOM" class="block w-3/4 mx-auto mb-2 text-center rounded text-blue-900">
+            <button id="discount-button" class="px-5 py-2 rounded bg-green-600">Click to get</button>
+         </div>
+      </div>
+   </main>
+
+
+
+
+   <script>
+      function getValueFromText(elementId) {
+         const elementBody = document.getElementById(elementId);
+         const elementValueString = elementBody.innerText;
+         const elementValue = parseFloat(elementValueString);
+         return elementValue;
+      };
+
+      function calculateDiscount(value, discount){
+         const discountAmount = value * (discount / 100);
+         const priceAfterPrice = value - discountAmount;
+         return priceAfterPrice;
+      }
+
+      function setPrice(elementId, value){
+         const targetElement = document.getElementById(elementId);
+         targetElement.innerText = value;
+      }
+
+      document.getElementById('discount-button').addEventListener('click', function () {
+         // get main price
+         const currentPrice = getValueFromText('price');
+
+         // get discount amount in percentage
+         const discount = getValueFromText('discount');
+
+         // get discount code from buyer
+         const inputCodeElement = document.getElementById('discout-code');
+         const inputCode = inputCodeElement.value;
+
+         // console.log(inputCode);
+         const discountCode = 'DOM';
+         if(!(inputCode === discountCode)){
+            alert('Discount Code is not available')
+            inputCodeElement.value = '';
+            return;
+         }
+
+         
+         // set the input
+         inputCodeElement.value = 'You Already Got The Offer';
+         inputCodeElement.disabled = "true";
+
+         // set the final price for buying
+         const offerPrice = calculateDiscount(currentPrice, discount)
+         setPrice('price', offerPrice)
+      });
+
+   </script>
+</body>
+</html>
